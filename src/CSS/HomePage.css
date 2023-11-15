@@ -1,0 +1,248 @@
+body {
+    background-image: url("home-img.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.home-title {
+    font-size: 60px;
+    color: #fff;
+    text-align: center;
+    margin-top: 340px;
+}
+
+.home-description {
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 60px;
+    border: 1px solid;
+    padding: 36px;
+    border-radius: 10px;
+    
+}
+
+.vegan-button {
+    background-color: darkgreen;
+    font-size: 36px;
+    color: #fff;
+    border: 2px solid #90EE90;
+    padding: 20px 35px;
+    border-radius: 10px;
+    display: block;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0 auto;
+    margin-top: 70px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.vegetarian-button {
+    background-color: darkgreen;
+    font-size: 36px;
+    border: 2px solid #90EE90;
+    color: #fff;
+    padding: 20px 35px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 80px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.vegan-button:hover,
+.vegetarian-button:hover {
+    background-color: yellowgreen;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.home-button {
+    width: 100px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 15px;
+}
+
+.home-button:hover,
+.back-button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.back-button {
+    width: 100px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.vegan-search h1, .vegetarian-search h1, .cuisine-title {
+    font-size: 70px;
+    color: #fff;
+    text-align: center;
+    margin-top: 195px;
+    
+}
+
+.vegan-search input, .vegetarian-search input {
+    font-size: 28px;
+    border-radius: 15px;
+    padding: 5px 20px;
+    display: block;
+    margin: 0 auto;
+}
+
+.cuisine-dropdown {
+ 
+    padding: 10px;
+    position: absolute;
+    display: block;
+}
+
+.cuisine-dropdown label {
+    color: #fff;
+    font-size: 37px;
+    font-weight: bold;
+}
+
+.cuisine-dropdown select {
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid;
+    padding: 8px 10px;
+    border-radius: 10px;
+    margin-left: 12px;
+    width: 200px;
+    cursor: pointer;
+  
+}
+
+.explore-button-link button {
+    font-size: 22px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    top: 52%;
+    margin-top: 5px;
+    position: absolute;
+    right: 20%;
+    cursor: pointer;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.explore-button-link button:hover {
+    background-color: lightpink;
+}
+
+.recipes-vegan, .recipes-vegetarian, .cuisine-recipes {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 90px;
+    justify-content: space-between;
+}
+
+.recipe-card {
+    flex-basis: calc(33.33% - 10px);
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.recipe-card img {
+    width: 380px;
+    border-radius: 10px;
+}
+
+.recipe-card p {
+    color: #fff;
+    font-weight: bold;
+    font-size: 33px;
+}
+
+.recipe-details-button button{
+    text-align: center;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.recipe-details-button button:hover {
+    transform: scale(1.1);
+}
+
+.no-results {
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+    
+}
+
+.recipe-title {
+    color: #fff;
+    font-size: 50px;
+    margin-top: 170px;
+
+}
+
+.summary {
+    color: #fff;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.recipe-summary {
+    color: #fff;
+    font-size: 22px;
+}
+
+.ingredients-section {
+    width: 450px;
+    height: 400px;
+    position: absolute;
+    top: 640px;
+    left: 640px;
+}
+
+.ingredients-section b {
+    font-weight: bold;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.ingredients-section li {
+    color: #fff;
+    font-size: 21px;
+}
+
+.recipe-image {
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.instructions-section {
+    width: 1000px;
+    height: 900;
+    position: absolute;
+    top: 640px;
+    left: 1000px;
+
+}
+
+.instructions-section b {
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.instructions-section li {
+    color: #fff;
+    font-size: 21px;
+}
