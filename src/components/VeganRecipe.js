@@ -28,7 +28,9 @@ function VeganRecipe() {
         <>
           <h1 className="recipe-title">{recipeData.title}</h1>
           <b className="summary">Summary</b>
-          <p className="recipe-summary">{recipeData.summary}</p>
+          <div className='summary-container'>
+            <p className="recipe-summary">{recipeData.summary}</p>
+          </div>
           <img src={recipeData.image} alt="Recipe" className="recipe-image" />
 
           <div className="ingredients-section">

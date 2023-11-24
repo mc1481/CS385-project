@@ -22,9 +22,10 @@ function VeganSearch() {
     setSelectedCuisine(event.target.value);
   }
 
-  // callback function for handling recipes fetched by FetchRecipes component
+  // handling recipes fetched by FetchRecipes component
   const handleRecipesFetched = (recipes) => {
     setRecipes(recipes);
+    setNoResults(recipes.length === 0);
   };
 
   // callback function for handling no results found by FetchRecipes component

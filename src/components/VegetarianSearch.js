@@ -25,6 +25,7 @@ function VegetarianSearch() {
   // callback function for hadnling recipes fetched by FetchRecipes component
   const handleRecipesFetched = (recipes) => {
     setRecipes(recipes);
+    setNoResults(recipes.length === 0);
   };
 
   // callback function for handling no results found by FetchRecipes component
