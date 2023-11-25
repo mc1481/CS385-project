@@ -22,13 +22,13 @@ function VegetarianSearch() {
     setSelectedCuisine(event.target.value);
   }
 
-  // callback function for hadnling recipes fetched by FetchRecipes component
+  // function for hadnling recipes fetched by FetchRecipes component
   const handleRecipesFetched = (recipes) => {
     setRecipes(recipes);
     setNoResults(recipes.length === 0);
   };
 
-  // callback function for handling no results found by FetchRecipes component
+  // function for handling no results found by FetchRecipes component
   const handleNoResults = () => {
     setNoResults(true);
   };

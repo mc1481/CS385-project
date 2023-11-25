@@ -19,7 +19,7 @@ function Cuisine() {
       async function fetchCuisineRecipes() {
           try {
               const response = await axios.get(
-                  `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&cuisine=${cuisineType}&diet=${diet}&number=10`
+                  `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&cuisine=${cuisineType}&diet=${diet}&number=12`
               );
 
               setRecipes(response.data.results);
@@ -45,7 +45,7 @@ function Cuisine() {
     <div>
       <HomeButton />
       <BackButton />
-        <h1 className="cuisine-title">{cuisineType} Recipes which are {diet}</h1>
+        <h1 className="cuisine-title">{cuisineType} recipes which are {diet}</h1>
         <div className="cuisine-recipes">
             {recipes.map((recipe) => (
                 <div key={recipe.id} className="recipe-card">
