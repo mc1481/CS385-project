@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from 'react';
 
-// this function is used by VeganSearch.js and VegetarianSearch.js
+// this function is used by VeganSearch.js, VegetarianSearch.js, CuisineRecipe
 function FetchRecipes({ diet, searchTerm, onRecipesFetched, onNoResults, apiKey}) {
   const [loading, setLoading] = useState(false);
 
@@ -14,7 +14,7 @@ function FetchRecipes({ diet, searchTerm, onRecipesFetched, onNoResults, apiKey}
         setLoading(true);
         try {
             const response = await axios.get(
-                `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${searchTerm}&number=25&diet=${diet}`
+                `https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${searchTerm}&number=24&diet=${diet}`
             );
 
             if (response.data.results.length === 0) {

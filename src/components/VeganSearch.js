@@ -22,27 +22,48 @@ function VeganSearch() {
     setSelectedCuisine(event.target.value);
   }
 
-  // callback function for handling recipes fetched by FetchRecipes component
+  // handling recipes fetched by FetchRecipes component
   const handleRecipesFetched = (recipes) => {
     setRecipes(recipes);
+    setNoResults(recipes.length === 0);
   };
 
-  // callback function for handling no results found by FetchRecipes component
+  // handling no results found by FetchRecipes component
   const handleNoResults = () => {
     setNoResults(true);
   };
 
   return (
-    <div>
-      <HomeButton />
-      <div className="vegan-search">
-        <h1>Vegan Recipes</h1>
-        <input
-          type="text"
-          placeholder="Search for vegan recipes"
-          value={searchTerm}
-          onChange={onSearchChange}
-        />
+    <div className="vegan-search-background">
+      <div className="search-container">
+        <div className="vegan-search">
+          <HomeButton />
+          <h1>Vegan Recipes</h1>
+          <input
+            type="text"
+            placeholder="Search for vegan recipes"
+            value={searchTerm}
+            onChange={onSearchChange}
+          />
+        </div>
+
+        <div className="cuisine-dropdown">
+          <label htmlFor="cuisine">Cuisine:</label>
+          <select id="cuisine" name="cuisine" onChange={onCuisineChange}>
+            <option value="">Select Cuisine</option>
+            {cuisines.map((cuisine, index) => (
+              <option key={index} value={cuisine}>
+                {cuisine}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {selectedCuisine && (
+        <Link to={`/cuisine/${selectedCuisine}/${diet}`} className="explore-button-link">
+          <button>Explore {selectedCuisine} Cuisine</button>
+        </Link>
+        )}
       </div>
       
       <FetchRecipes
@@ -63,30 +84,12 @@ function VeganSearch() {
             <img src={recipe.image} alt={recipe.title} />
             <p>{recipe.title}</p>
             <Link to={`/veganRecipe/${recipe.id}`} className="recipe-details-button">
-                <button>View Recipe Details</button>
+              <button>View Recipe Details</button>
             </Link>
           </div>
         ))}
       </div>
-
-      <div className="cuisine-dropdown">
-        <label htmlFor="cuisine">Cuisine:</label>
-        <select id="cuisine" name="cuisine" onChange={onCuisineChange}>
-          <option value="">Select Cuisine</option>
-          {cuisines.map((cuisine, index) => (
-            <option key={index} value={cuisine}>
-              {cuisine}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      {selectedCuisine && (
-        <Link to={`/cuisine/${selectedCuisine}/${diet}`} className="explore-button-link">
-          <button>Explore {selectedCuisine} Cuisine</button>
-        </Link>
-      )}
-    </div>
+  </div>
   );
 }
 
