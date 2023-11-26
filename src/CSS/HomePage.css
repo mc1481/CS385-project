@@ -123,6 +123,8 @@ body {
     
 }
 
+
+
 .search-container {
     height: 30vh;
 }
@@ -237,10 +239,10 @@ body {
 }
 
 .no-results {
-    color: #fff;
-    font-size: 25px;
+    color: black;
+    font-size: 28px;
     text-align: center;
-    
+    margin-top: 5%;
 }
 
 .recipe-div {
